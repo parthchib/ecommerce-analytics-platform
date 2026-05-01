@@ -2,15 +2,7 @@
 
 
 
-> End-to-end analytics project analyzing customer behavior, product performance, and experimentation frameworks
-
-
-
-!\[Status](https://img.shields.io/badge/status-in%20progress-yellow)
-
-!\[Python](https://img.shields.io/badge/python-3.8+-blue)
-
-!\[DuckDB](https://img.shields.io/badge/DuckDB-latest-orange)
+End-to-end analytics project analyzing customer behavior, product performance, and experimentation frameworks using DuckDB, dbt, and Python.
 
 
 
@@ -18,15 +10,15 @@
 
 
 
-This project demonstrates end-to-end data analytics capabilities by building a complete analytics platform from raw e-commerce data. The platform includes customer segmentation, cohort analysis, product performance tracking, and A/B testing frameworks.
+This project demonstrates complete data analytics capabilities by building an analytics platform from raw e-commerce data. Includes customer segmentation, cohort analysis, product performance tracking, and A/B testing frameworks.
 
 
 
-\*\*Built to showcase:\*\*
+\*\*Key capabilities showcased:\*\*
 
-\- Advanced SQL \& data modeling (dbt)
+\- Advanced SQL \& dimensional data modeling (dbt)
 
-\- Data pipeline development
+\- Data pipeline development with DuckDB
 
 \- Statistical analysis \& experimentation
 
@@ -42,7 +34,7 @@ This project demonstrates end-to-end data analytics capabilities by building a c
 
 \- \*\*Transformation:\*\* dbt
 
-\- \*\*Analysis:\*\* Python (pandas, scipy)
+\- \*\*Analysis:\*\* Python (pandas, scipy, numpy)
 
 \- \*\*Visualization:\*\* Tableau Public
 
@@ -54,13 +46,33 @@ This project demonstrates end-to-end data analytics capabilities by building a c
 
 
 
-\- \*\*Customer Segmentation:\*\* RFM analysis identifying customer segments
+\### Customer Analytics
 
-\- \*\*Cohort Analysis:\*\* Retention tracking by user cohorts
+\- RFM segmentation analysis
 
-\- \*\*Product Performance:\*\* Reorder rates, market penetration metrics
+\- Customer lifetime value modeling
 
-\- \*\*A/B Testing Framework:\*\* Bayesian statistical analysis
+\- Cohort retention tracking
+
+
+
+\### Product Analytics
+
+\- Product performance metrics
+
+\- Reorder rate analysis
+
+\- Market penetration tracking
+
+
+
+\### Experimentation
+
+\- Bayesian A/B testing framework
+
+\- Statistical significance testing
+
+\- Sample size calculators
 
 
 
@@ -76,8 +88,6 @@ This project demonstrates end-to-end data analytics capabilities by building a c
 
 Python 3.8+
 
-pip
-
 ```
 
 
@@ -86,11 +96,11 @@ pip
 
 
 
-1\. Clone the repository
+\*\*1. Clone the repository\*\*
 
 ```bash
 
-git clone https://github.com/YOUR\_USERNAME/ecommerce-analytics-platform.git
+git clone https://github.com/parthchib/ecommerce-analytics-platform.git
 
 cd ecommerce-analytics-platform
 
@@ -98,7 +108,7 @@ cd ecommerce-analytics-platform
 
 
 
-2\. Create virtual environment
+\*\*2. Create virtual environment\*\*
 
 ```bash
 
@@ -106,13 +116,11 @@ python -m venv venv
 
 source venv/bin/activate  # Mac/Linux
 
-\# venv\\Scripts\\activate  # Windows
-
 ```
 
 
 
-3\. Install dependencies
+\*\*3. Install dependencies\*\*
 
 ```bash
 
@@ -122,21 +130,27 @@ pip install -r requirements.txt
 
 
 
-4\. Download dataset
+\*\*4. Download dataset\*\*
 
-\- Go to \[Instacart Market Basket Analysis](https://www.kaggle.com/c/instacart-market-basket-analysis/data)
+\- Visit \[Instacart Market Basket Analysis](https://www.kaggle.com/c/instacart-market-basket-analysis/data)
 
-\- Download CSVs and place in `raw\_data/` folder
+\- Download all CSVs
 
-
-
-5\. Load data (coming soon)
+\- Place in `raw\_data/` folder
 
 
 
-\## 📁 Project Structure
+\*\*5. Load data\*\*
 
-ecommerce-analytics-platform/
+```bash
+
+python data/load\_data.py
+
+```
+
+
+
+\## 📁 Project Structureecommerce-analytics-platform/
 
 ├── data/              # Data loading scripts
 
