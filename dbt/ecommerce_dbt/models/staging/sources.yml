@@ -1,0 +1,93 @@
+sources:
+  - name: ecommerce
+    schema: main
+    tables:
+      - name: stg_aisles
+        description: "Aisle dimension table"
+        columns:
+          - name: aisle_id
+            description: "Unique aisle identifier"
+            tests:
+              - unique
+              - not_null
+          - name: aisle
+            description: "Aisle name"
+
+      - name: stg_departments
+        description: "Department dimension table"
+        columns:
+          - name: department_id
+            description: "Unique department identifier"
+            tests:
+              - unique
+              - not_null
+          - name: department
+            description: "Department name"
+
+      - name: stg_products
+        description: "Product dimension table with aisle and department info"
+        columns:
+          - name: product_id
+            description: "Unique product identifier"
+            tests:
+              - unique
+              - not_null
+          - name: product_name
+            description: "Product name"
+          - name: aisle_id
+            description: "Foreign key to aisles"
+          - name: department_id
+            description: "Foreign key to departments"
+          - name: aisle
+            description: "Aisle name (denormalized)"
+          - name: department
+            description: "Department name (denormalized)"
+
+      - name: stg_orders
+        description: "Orders fact table"
+        columns:
+          - name: order_id
+            description: "Unique order identifier"
+            tests:
+              - unique
+              - not_null
+          - name: user_id
+            description: "Customer who placed the order"
+            tests:
+              - not_null
+          - name: eval_set
+            description: "Dataset split (prior, train, test)"
+          - name: order_number
+            description: "Sequential order number for this customer"
+          - name: order_dow
+            description: "Day of week (0=Sunday)"
+          - name: order_hour_of_day
+            description: "Hour of day (0-23)"
+          - name: days_since_prior_order
+            description: "Days since last order (0 for first order)"
+            tests:
+              - not_null
+          - name: is_first_order
+            description: "Flag indicating first order (1=yes, 0=no)"
+            tests:
+              - not_null
+          - name: loaded_at
+            description: "ETL timestamp"
+
+      - name: stg_order_products
+        description: "Order line items fact table"
+        columns:
+          - name: order_id
+            description: "Foreign key to orders"
+            tests:
+              - not_null
+          - name: product_id
+            description: "Foreign key to products"
+            tests:
+              - not_null
+          - name: add_to_cart_order
+            description: "Sequence product was added to cart"
+          - name: reordered
+            description: "Product was reordered (1=yes, 0=no)"
+          - name: loaded_at
+            description: "ETL timestamp"

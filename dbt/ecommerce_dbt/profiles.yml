@@ -1,0 +1,6 @@
+ecommerce_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: C:/Users/ACER'/Documents/2026/Projects2026/ecommerce-analytics-platform/data/ecommerce.db

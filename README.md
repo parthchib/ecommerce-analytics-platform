@@ -1,14 +1,10 @@
 \# E-Commerce Analytics Platform
 
-
-
 End-to-end analytics project analyzing customer behavior, product performance, and experimentation frameworks using DuckDB, dbt, and Python.
 
 
 
 \## 🎯 Project Overview
-
-
 
 This project demonstrates complete data analytics capabilities by building an analytics platform from raw e-commerce data. Includes customer segmentation, cohort analysis, product performance tracking, and A/B testing frameworks.
 
@@ -16,19 +12,17 @@ This project demonstrates complete data analytics capabilities by building an an
 
 \*\*Key capabilities showcased:\*\*
 
-\- Advanced SQL \& dimensional data modeling (dbt)
+\- Advanced SQL \\\& dimensional data modeling (dbt)
 
 \- Data pipeline development with DuckDB
 
-\- Statistical analysis \& experimentation
+\- Statistical analysis \\\& experimentation
 
-\- Business intelligence \& visualization
+\- Business intelligence \\\& visualization
 
 
 
 \## 🛠️ Tech Stack
-
-
 
 \- \*\*Database:\*\* DuckDB
 
@@ -44,8 +38,6 @@ This project demonstrates complete data analytics capabilities by building an an
 
 \## 📊 Key Features
 
-
-
 \### Customer Analytics
 
 \- RFM segmentation analysis
@@ -54,7 +46,7 @@ This project demonstrates complete data analytics capabilities by building an an
 
 \- Cohort retention tracking
 
-
+&#x20; 
 
 \### Product Analytics
 
@@ -82,61 +74,69 @@ This project demonstrates complete data analytics capabilities by building an an
 
 \### Prerequisites
 
-
-
 ```bash
+
+
 
 Python 3.8+
 
+
+
 ```
 
-
-
 \### Installation
-
-
 
 \*\*1. Clone the repository\*\*
 
 ```bash
 
+
+
 git clone https://github.com/parthchib/ecommerce-analytics-platform.git
+
+
 
 cd ecommerce-analytics-platform
 
+
+
 ```
-
-
 
 \*\*2. Create virtual environment\*\*
 
 ```bash
 
+
+
 python -m venv venv
+
+
 
 source venv/bin/activate  # Mac/Linux
 
+
+
 ```
-
-
 
 \*\*3. Install dependencies\*\*
 
 ```bash
 
+
+
 pip install -r requirements.txt
+
+
 
 ```
 
-
-
 \*\*4. Download dataset\*\*
 
-\- Visit \[Instacart Market Basket Analysis](https://www.kaggle.com/c/instacart-market-basket-analysis/data)
+\- Visit \\\[Instacart Market Basket Analysis](https://www.kaggle.com/c/instacart-market-basket-analysis/data)
 
 \- Download all CSVs
 
-\- Place in `raw\_data/` folder
+\- Place in `raw\\\_data/` folder
 
 
 
@@ -144,19 +144,23 @@ pip install -r requirements.txt
 
 ```bash
 
-python data/load\_data.py
+
+
+python data/load\\\_data.py
+
+
 
 ```
 
-
-
 \## 📁 Project Structureecommerce-analytics-platform/
+
+
 
 ├── data/              # Data loading scripts
 
-├── raw\_data/          # Raw CSV files (not tracked)
+├── raw\\\_data/          # Raw CSV files (not tracked)
 
-├── dbt/               # dbt models \& transformations
+├── dbt/               # dbt models \\\& transformations
 
 ├── analysis/          # Jupyter notebooks
 
@@ -170,43 +174,31 @@ python data/load\_data.py
 
 \## 📈 Results
 
-
-
-\*(Will be updated with dashboards and insights)\*
+\*\*(Will be updated with dashboards and insights)\*\*
 
 
 
 \## 🧪 A/B Testing Framework
 
-
-
-\*(Coming soon)\*
+\*\*(Coming soon)\*\*
 
 
 
 \## 📝 Methodology
 
-
-
-\*(Will document approach and key decisions)\*
+\*\*(Will document approach and key decisions)\*\*
 
 
 
 \## 🤝 Contact
 
-
-
 \*\*Parth Chib\*\*
 
-\- LinkedIn: \[linkedin.com/in/parthchib31](https://linkedin.com/in/parthchib31)
+\- LinkedIn: \\\[linkedin.com/in/parthchib31](https://linkedin.com/in/parthchib31)
 
 \- Email: parthchib27@gmail.com
 
 
 
-\---
-
-
-
-\*This project was built as a personal learning initiative to deepen expertise in data analytics and experimentation frameworks.\*
+\_This project was built as a personal learning initiative to deepen expertise in data analytics and experimentation frameworks.\_
 
